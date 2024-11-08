@@ -11,7 +11,7 @@ pipeline {
                 echo 'unit testing is done here always'
             }
         }
-        stage('Sonar Scanner') {
+        stage('Sonar Scan') {
             steps {
                 sh 'ls -ltr'
                 sh 'sonar-scanner'
