@@ -23,6 +23,12 @@ pipeline {
         stage('build'){
             steps{
                 sh 'ls -ltr'
+                sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
+            }
+        }
+        stage('publish artifact'){
+            steps{
+                sh 'ls -ltr'
                 sh 'zip -r ./* --exclude=.git --exclude=.zip'
             }
         }
